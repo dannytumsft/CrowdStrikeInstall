@@ -1,8 +1,8 @@
 $params = @{
-    resourceGroupName     = "crwdstrikewind" # <-- Change this value for the Resource Group Name
-    storageAccountName    = "crwdstrikestrgwind" # <-- Change this value - must be globally unique
+    resourceGroupName     = "Crowdstrikedemo" # <-- Change this value for the Resource Group Name
+    storageAccountName    = "crwdstrikestrgdemo" # <-- Change this value - must be globally unique
     location              = "eastus" # <-- Change this value to a location you want
-    automationAccountName = "crwdstrikewindauto" # <-- Change this value for the Automation Account Name
+    automationAccountName = "crwdstrikeauto" # <-- Change this value for the Automation Account Name
 }
 
 New-AzResourceGroup -Name $params.resourceGroupName -Location 'eastus' -Force
@@ -33,3 +33,4 @@ New-AzResourceGroupDeployment -ResourceGroupName $params.resourceGroupName `
     -location $params.location `
     -topicName "PolicyStateChanges" `
     -Verbose
+
